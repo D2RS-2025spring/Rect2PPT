@@ -1,7 +1,3 @@
-下面是一个完整的 `README.md` 示例格式，你可以直接复制并根据需要调整内容：
-
----
-
 # Rect2PPT
 
 Rect2PPT 是一个用于自动识别并裁剪会议或报告中拍摄的 PPT 照片的项目。该项目集成了先进的 [Grounded SAM](https://github.com/IDEA-Research/Grounded-SAM) 模型，实现了从 PPT 照片中自动定位并提取 PPT 区域，并利用裁剪后的图片生成全新的 PPT 文件，从而大大简化了后期整理工作。
@@ -106,19 +102,3 @@ Paths:
 
 在现实中，会议或报告中的 PPT 照片往往由于拍摄角度和光照等因素难以直接用于展示或归档。Rect2PPT 通过自动检测和裁剪出 PPT 区域，再自动生成 PPT 文件，能够极大地简化整理和归档工作，提高工作效率。
 
-## 贡献
-
-欢迎对 Rect2PPT 提出建议或贡献代码！如果你发现 bug 或有改进建议，请通过提交 [Issue](https://github.com/your_repo/issues) 或 [Pull Request](https://github.com/your_repo/pulls) 的方式与我们分享。
-
-## 许可证
-
-本项目采用 [MIT License](LICENSE) 开源许可证进行分发。
-
-## 联系方式
-
-如有任何疑问或建议，请通过以下方式与作者取得联系：  
-Email: your_email@example.com
-
----
-
-这种详细的说明不仅能帮助其他开发者快速上手项目，还能展示项目的自动化流程和技术深度。希望这份 `README.md` 能够帮助你推广并更好地维护 Rect2PPT 项目！
