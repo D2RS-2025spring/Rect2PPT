@@ -129,7 +129,7 @@ python web_app.py
 
 ## 鸣谢
 
-感谢 [Gradio](https://gradio.app/)、[python-pptx](https://python-pptx.readthedocs.io/)、[Grounded SAM](https://github.com/IDEA-Research/Grounded-SAM) 及其他开源项目对本项目的支持。
+感谢 [Gradio](https://gradio.app/)、[python-pptx](https://python-pptx.readthedocs.io/)、[Grounded SAM](https://github.com/IDEA-Research/Grounded-Segment-Anything) 及其他开源项目对本项目的支持。
 
 ---
 
