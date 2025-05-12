@@ -2,7 +2,7 @@
 
 # Rect2PPT
 
-Rect2PPT 是一个用于自动识别并裁剪会议或报告中拍摄的 PPT 照片的项目。该项目集成了先进的 [Grounded SAM](https://github.com/IDEA-Research/Grounded-SAM) 模型，实现了从 PPT 照片中自动定位并提取 PPT 区域，并利用裁剪后的图片生成全新的 PPT 文件，从而大大简化了后期整理工作。
+Rect2PPT 是一个用于自动识别并裁剪会议或报告中拍摄的 PPT 照片的项目。该项目集成了先进的 [Grounded SAM](https://github.com/IDEA-Research/Grounded-Segment-Anything) 模型，实现了从 PPT 照片中自动定位并提取 PPT 区域，并利用裁剪后的图片生成全新的 PPT 文件，从而大大简化了后期整理工作。
 
 ---
 
@@ -63,7 +63,20 @@ BASE_DIR/
   ```bash
   pip install invoke
   ```
+  
+- **下载模型权重**  
+  项目依赖两个关键的模型权重文件，请按照下面的命令下载：
+  ```bash
+  # 进入项目目录（如果该目录存在）
+  cd Rect2PPT
 
+  # 下载 SAM 模型的权重
+  wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
+
+  # 下载 GroundingDINO 模型的权重
+  wget https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
+  ```
+  
 - **创建或激活虚拟环境**  
   根据 `environment.yaml` 文件创建一个 Conda 环境：
   ```bash
@@ -105,29 +118,12 @@ BASE_DIR/
 ```bash
 python web_app.py
 ```
-默认网址：[http://localhost:7860/](http://localhost:7860/)
+默认网址：[http://127.0.0.1:7860/](http://127.0.0.1:7860/)
 
 在网页上，你可以：
 - 上传图片（系统会自动创建用户专属目录，存放在 `upload_history` 下）。
 - 点击“开始处理图片”启动图像处理任务。
 - 点击“生成 PPT”生成 PPT 文件，并在网页上提供下载链接。
-
----
-
-## 配置文件说明
-
-项目使用 `config.yaml` 对路径及其他配置进行管理，其主要结构示例如下：
-```yaml
-Paths:
-  orig_folder: "path/to/original_images"   # 原始 PPT 照片存放目录
-  mask_folder: "path/to/cropped_images"      # 裁剪后图片存放目录
-  output_folder: "path/to/output_ppt"        # 生成 PPT 的输出目录
-PPT:
-  slide_width: 16
-  slide_height: 9
-  slide_layout_index: 6
-```
-请根据实际情况调整配置文件中的路径和参数。
 
 ---
 
