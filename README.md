@@ -17,8 +17,6 @@ Rect2PPT 是一个用于自动识别并裁剪会议或报告中拍摄的 PPT 照
 - **自动生成 PPT**  
   将处理后的图片整合生成 PPT 文件，让展示与汇报更为整洁专业。
 
-- **自动化任务管理**  
-  使用 [Invoke](http://www.pyinvoke.org/) 工具统一管理环境配置、图像处理与 PPT 生成任务，实现一站式自动化流程。
 
 ---
 
@@ -28,7 +26,6 @@ Rect2PPT 是一个用于自动识别并裁剪会议或报告中拍摄的 PPT 照
 Rect2PPT/
 │
 ├── environment.yaml         # Conda 环境配置文件（记录所有依赖）
-├── tasks.py                 # Invoke 任务定义文件，包含 setup-env、run-detect、run-create-ppt 和 all 任务
 ├── detect_rect.py           # 图片识别与 PPT 区域裁剪模块（集成 Grounded SAM 模型）
 ├── create_ppt.py            # 根据裁剪后的 PPT 区域图片生成 PPT 文件
 ├── setup_env.bat            # Windows 平台下的环境配置批处理脚本
@@ -79,40 +76,15 @@ BASE_DIR/
   
 - **创建或激活虚拟环境**  
   根据 `environment.yaml` 文件创建一个 Conda 环境：
+  在conda中定位到项目目录下，运行以下命令：
   ```bash
-  invoke setup-env
+  conda env create -f environment.yaml
   ```
   该任务会自动检测或创建目标环境，并提示如何激活。
 
 ### 2. 图片处理与 PPT 生成
 
-项目提供两种调用方式：  
-- **命令行方式（使用 Invoke）**  
 - **网页端方式（基于 Gradio）**
-
-#### 命令行方式
-
-- **执行 PPT 区域识别与裁剪**  
-  运行以下命令启动图像处理任务：
-  ```bash
-  invoke run-detect
-  ```
-  如果不传参数，则默认使用 `config.yaml` 中的路径设置。
-
-- **生成 PPT 文件**  
-  完成图像处理后，使用下面的命令生成 PPT 文件：
-  ```bash
-  invoke run-create-ppt
-  ```
-  同样，可使用 `config.yaml` 中的默认配置。
-
-- **一键式执行所有任务**  
-  若希望同时完成环境搭建、图像处理与 PPT 生成，可运行：
-  ```bash
-  invoke all
-  ```
-
-#### 网页端方式
 
 运行以下命令启动 Gradio 网页服务：
 ```bash
