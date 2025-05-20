@@ -74,7 +74,7 @@ BASE_DIR/
   pip install invoke
   ```
  
- - **创建或激活虚拟环境**  
+- **创建或激活虚拟环境**  
   根据 `environment.yaml` 文件创建一个 Conda 环境：
   在conda中定位到项目目录下，运行以下命令：
   ```bash
@@ -99,10 +99,10 @@ BASE_DIR/
 
 - **网页端方式（基于 Gradio）**
 
-运行以下命令启动 Gradio 网页服务：
-```bash
-python web_app.py
-```
+  运行以下命令启动 Gradio 网页服务：
+  ```bash
+  python web_app.py
+  ```
 默认网址：[http://127.0.0.1:7860/](http://127.0.0.1:7860/)
 
 在网页上，你可以：
