@@ -58,6 +58,7 @@ BASE_DIR/
 ### 1. 环境准备
 
 - **下载代码包**
+
   请确保在本地已安装 [Rect2PPT](https://github.com/D2RS-2025spring/Rect2PPT)。
 
   注意：项目储存路径为全英文路径
