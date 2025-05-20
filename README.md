@@ -73,7 +73,15 @@ BASE_DIR/
   ```bash
   pip install invoke
   ```
-  
+ 
+ - **创建或激活虚拟环境**  
+  根据 `environment.yaml` 文件创建一个 Conda 环境：
+  在conda中定位到项目目录下，运行以下命令：
+  ```bash
+  conda env create -f environment.yaml
+  ```
+  该任务会自动检测或创建目标环境，并提示如何激活。
+ 
 - **下载模型权重**  
   项目依赖两个关键的模型权重文件，请按照下面的命令下载：
   ```bash
@@ -87,14 +95,6 @@ BASE_DIR/
   wget https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
   ```
   
-- **创建或激活虚拟环境**  
-  根据 `environment.yaml` 文件创建一个 Conda 环境：
-  在conda中定位到项目目录下，运行以下命令：
-  ```bash
-  conda env create -f environment.yaml
-  ```
-  该任务会自动检测或创建目标环境，并提示如何激活。
-
 ### 3. 图片处理与 PPT 生成
 
 - **网页端方式（基于 Gradio）**
