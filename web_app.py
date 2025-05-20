@@ -199,6 +199,6 @@ with gr.Blocks() as demo:
         inputs=[],
         outputs=[ppt_file_output, ppt_status]
     )
-    
+
 # 启动 Gradio 服务，监听所有 IP，端口号为 7860
-demo.launch(server_name="0.0.0.0", server_port=7860)
+demo.launch(server_name="127.0.0.1", server_port=7860)
