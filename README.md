@@ -57,6 +57,13 @@ BASE_DIR/
 
 ### 1. 环境准备
 
+- **下载代码包**
+  请确保在本地已安装 [Rect2PPT](https://github.com/D2RS-2025spring/Rect2PPT)。
+
+  注意：项目储存路径为全英文路径
+  
+### 2. 环境准备
+
 - **安装 Conda**  
   请确保系统中已安装 [Conda](https://docs.conda.io)。
 
@@ -87,7 +94,7 @@ BASE_DIR/
   ```
   该任务会自动检测或创建目标环境，并提示如何激活。
 
-### 2. 图片处理与 PPT 生成
+### 3. 图片处理与 PPT 生成
 
 - **网页端方式（基于 Gradio）**
 
